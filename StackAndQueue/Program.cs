@@ -12,9 +12,11 @@ namespace StackAndQueue
             {
                 Console.WriteLine("1.Stack- Push Operation");
                 Console.WriteLine("2.Stack-Peek and Pop Operation");
+                Stack obj = new Stack();
+                Console.WriteLine("3.Queue-Enqueue Operation");
+                Queue obj2= new Queue();
                 Console.WriteLine("Enter your choice");
                 choice = Convert.ToInt32(Console.ReadLine());
-                Stack obj = new Stack();
                 switch (choice)
                 {
                     case 1:
@@ -32,11 +34,17 @@ namespace StackAndQueue
                         obj.Pop();
                         obj.Display();
                         break;
+                    case 3:
+                        obj2.Enqueue(56);
+                        obj2.Enqueue(30);
+                        obj2.Enqueue(70);
+                        obj2.Display();
+                        break;
                     default:
                         Console.WriteLine("Enter a valid input!");
                         break;
                 }
-            } while (choice != 3);
+            } while (choice != 4);
         }
     }
 }

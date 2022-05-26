@@ -35,7 +35,7 @@ namespace StackAndQueue
                 Console.WriteLine("Top element is"+top.data);
             }
         }
-        //Pop-It deletes the element
+        //Pop-It deletes the topmost element
         public void Pop()
         {
             if (top==null)
@@ -45,6 +45,14 @@ namespace StackAndQueue
             }
             Node temp = top;
             top = top.next;
+        }
+        public void IsEmpty()
+        {
+            while (top != null)
+            {
+                Peek();
+                Pop();
+            }
         }
         //For Printing or Display of Result
         public void Display()
