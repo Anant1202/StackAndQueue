@@ -22,6 +22,30 @@ namespace StackAndQueue
             top = new_node;
             Console.WriteLine("New Node {0} is added ", new_node.data);
         }
+        //Peek-It returns the topmost element
+        public void Peek()
+        {
+            if(top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            else
+            {
+                Console.WriteLine("Top element is"+top.data);
+            }
+        }
+        //Pop-It deletes the element
+        public void Pop()
+        {
+            if (top==null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Node temp = top;
+            top = top.next;
+        }
         //For Printing or Display of Result
         public void Display()
         {
