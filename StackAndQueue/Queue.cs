@@ -26,6 +26,17 @@ namespace StackAndQueue
                 rear=rear.next;
             }
         }
+        //Dequeue-Used for deletion of head/front
+        public void Dequeue()
+        {
+            if (front == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Node temp = front;
+            front = front.next;
+        }
         //For Priting or Display of Result
         public void Display()
         {
